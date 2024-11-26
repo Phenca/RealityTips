@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="320.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.realitytips.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Label fx:id="error_label" textFill="RED" />
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Label text="Bill">
+            <font>
+               <Font name="Trebuchet MS" size="18.0" />
+            </font>
+            <HBox.margin>
+               <Insets right="4.0" />
+            </HBox.margin>
+         </Label>
+         <TextField fx:id="bill_amount" promptText="total in €">
+            <HBox.margin>
+               <Insets right="8.0" />
+            </HBox.margin>
+         </TextField>
+         <Label text="Tip">
+            <font>
+               <Font name="Trebuchet MS" size="18.0" />
+            </font>
+            <HBox.margin>
+               <Insets left="8.0" right="4.0" />
+            </HBox.margin>
+         </Label>
+         <TextField fx:id="tip_amount" promptText="tip in %" text="5">
+            <HBox.margin>
+               <Insets right="8.0" />
+            </HBox.margin>
+         </TextField>
+         <Label text="Nb People">
+            <font>
+               <Font name="Trebuchet MS" size="18.0" />
+            </font>
+            <HBox.margin>
+               <Insets left="8.0" right="4.0" />
+            </HBox.margin>
+         </Label>
+         <TextField fx:id="people_number" text="1" />
+      </children>
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Button fx:id="calculate" mnemonicParsing="false" onAction="#on_calculate_clicked" text="Calculate tips">
+            <font>
+               <Font name="Tw Cen MT Bold" size="18.0" />
+            </font>
+            <HBox.margin>
+               <Insets right="25.0" />
+            </HBox.margin>
+         </Button>
+         <Label text="Date">
+            <HBox.margin>
+               <Insets right="8.0" />
+            </HBox.margin>
+            <font>
+               <Font name="Trebuchet MS Bold" size="18.0" />
+            </font>
+         </Label>
+         <TextField fx:id="date_input" promptText="format dd/mm/yyyy" />
+      </children>
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Label text="Tip (per person)">
+            <font>
+               <Font name="Trebuchet MS" size="18.0" />
+            </font>
+            <HBox.margin>
+               <Insets right="8.0" />
+            </HBox.margin>
+         </Label>
+         <Text fx:id="per_person_tip" strokeType="OUTSIDE" strokeWidth="0.0" text="0.0">
+            <HBox.margin>
+               <Insets right="8.0" />
+            </HBox.margin>
+         </Text>
+         <Label text="Total (per person)">
+            <font>
+               <Font name="Trebuchet MS" size="18.0" />
+            </font>
+            <HBox.margin>
+               <Insets left="8.0" />
+            </HBox.margin>
+         </Label>
+         <Text fx:id="per_person_total" strokeType="OUTSIDE" strokeWidth="0.0" text="0.0">
+            <HBox.margin>
+               <Insets left="8.0" />
+            </HBox.margin>
+         </Text>
+      </children>
+   </HBox>
+</VBox>
